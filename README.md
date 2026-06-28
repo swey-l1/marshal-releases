@@ -2,7 +2,7 @@
 
 Download builds of **Marshal**, a modern Windows process manager: priority/affinity control, the **AutoTame** background-CPU balancer, persistent rules, **Gaming Mode**, a live monitor, and a system tray.
 
-**🌐 Product page:** https://marshal-app.netlify.app
+**🌐 Product page:** https://marshal.aimbetween.games
 
 ## Download
 
