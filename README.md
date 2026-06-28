@@ -2,7 +2,6 @@
 
 [![Downloads](https://img.shields.io/github/downloads/swey-l1/marshal-releases/total?label=downloads&color=7C6CF6)](https://github.com/swey-l1/marshal-releases/releases/latest)
 
-[![Marshal downloads over time](download-chart.svg)](download-stats.csv)
 
 Download builds of **Marshal**, a modern Windows process manager: priority/affinity control, the **AutoTame** background-CPU balancer, persistent rules, **Gaming Mode**, a live monitor, and a system tray.
 
