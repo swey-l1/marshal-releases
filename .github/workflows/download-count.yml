@@ -3,7 +3,7 @@ name: Log download count
 on:
   schedule:
     - cron: '17 6 * * *'   # daily ~06:17 UTC
-  workflow_dispatch:        # allow manual runs
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Append daily download total
+      - name: Append daily total + render chart
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -26,8 +26,9 @@ jobs:
           else
             echo "$today,$total" >> "$file"
           fi
+          python3 gen_chart.py
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "$file"
+          git add "$file" download-chart.svg
           git diff --cached --quiet || git commit -m "chore: download total $today = $total"
           git push
